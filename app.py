@@ -954,35 +954,52 @@ def predict():
         District_Name=District_Name.upper()
         District_Name=Dist_dict.get(District_Name)
         Crop_Year=int(request.form['Crop_Year'])
-        Crop_Year1=Crop_Year
-        Crop_Year2=Crop_Year-2
-        Crop_Year7=Crop_Year2
-        Crop_Year3=Crop_Year-1
-        Crop_Year8=Crop_Year3
-        Crop_Year4=Crop_Year+1
-        Crop_Year9=Crop_Year4
-        Crop_Year5=Crop_Year+2
-        Crop_Year10=Crop_Year5
-        if Crop_Year<2052:
-            Crop_Year=Year_dict.get(Crop_Year)
+        if Crop_Year<1998:
+            Crop_Year1=Crop_Year
+            #Crop_Year=1
+            Crop_Year2=Crop_Year-2
+            Crop_Year7=Crop_Year2
+            Crop_Year2=1
+            Crop_Year3=Crop_Year-1
+            Crop_Year8=Crop_Year3
+            Crop_Year3=1
+            Crop_Year4=Crop_Year+1
+            Crop_Year9=Crop_Year4
+            Crop_Year4=1
+            Crop_Year5=Crop_Year+2
+            Crop_Year10=Crop_Year5
+            Crop_Year5=1
+            Crop_Year=1
         else:
-            Crop_Year=55
-        if Crop_Year2<2052:
-            Crop_Year2=Year_dict.get(Crop_Year2)
-        else:
-            Crop_Year2=55
-        if Crop_Year3<2052:
-            Crop_Year3=Year_dict.get(Crop_Year3)
-        else:
-            Crop_Year3=55
-        if Crop_Year4<2052:
-            Crop_Year4=Year_dict.get(Crop_Year4)
-        else:
-            Crop_Year4=55
-        if Crop_Year5<2052:
-            Crop_Year5=Year_dict.get(Crop_Year5)
-        else:
-            Crop_Year5=55
+            Crop_Year1=Crop_Year
+            Crop_Year2=Crop_Year-2
+            Crop_Year7=Crop_Year2
+            Crop_Year3=Crop_Year-1
+            Crop_Year8=Crop_Year3
+            Crop_Year4=Crop_Year+1
+            Crop_Year9=Crop_Year4
+            Crop_Year5=Crop_Year+2
+            Crop_Year10=Crop_Year5
+            if Crop_Year<2052:
+                Crop_Year=Year_dict.get(Crop_Year)
+            else:
+                Crop_Year=55
+            if Crop_Year2<2052:
+                Crop_Year2=Year_dict.get(Crop_Year2)
+            else:
+                Crop_Year2=55
+            if Crop_Year3<2052:
+                Crop_Year3=Year_dict.get(Crop_Year3)
+            else:
+                Crop_Year3=55
+            if Crop_Year4<2052:
+                Crop_Year4=Year_dict.get(Crop_Year4)
+            else:
+                Crop_Year4=55
+            if Crop_Year5<2052:
+                Crop_Year5=Year_dict.get(Crop_Year5)
+            else:
+                Crop_Year5=55
         Season=request.form['Season']
         Season1=Season
         Season=Season.capitalize()
